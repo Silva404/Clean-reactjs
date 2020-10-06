@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "start": "webpack-dev-server --open",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
@@ -20,6 +21,7 @@
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-standard-with-typescript": "^11.0.1",
     "eslint-plugin-import": "^2.20.2",
@@ -32,7 +34,10 @@
     "jest": "^26.5.0",
     "lint-staged": "^10.2.2",
     "ts-jest": "^26.4.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "axios": "^0.20.0",
